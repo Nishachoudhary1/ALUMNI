@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <!--- Header code start --->
+   <header>
+    <nav class="navigation">
+   <label class="navigation-h">NBU</label>
+   <ul>
+     <i class="fas fa-user"></i>
+    <li><a href="#">Logot</a></li>
+    <!--
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="#">Feedback</a></li>
+    -->
+    </ul>
+   <label class="checkbtn">
+       <i class="fas fa-bars"></i>
+   </label>
+    </nav>
+    </header>
+    <!--- Header code end ---> 
+
+    <section>
+        <form
+          action="success-user.html"
+          class="form"
+          id="form"
+          onsubmit="return validation()"
+        >
+        <div class="header">
+          <h2>North Bengal University</h2>
+          <!--<h3>Name of institute</h3>-->
+        </div>
+          <div class="user-control" id="name">
+            <label for="fname">Full Name: </label>
+            <input class="user-center" type="text" id="fname" autocomplete="on" /><b
+              ><span class="forerror" id="fname1"></span
+            ></b>
+          </div>
+  
+          <div class="user-control">
+            <label for="dob">Date Of Birth:</label>
+            <input
+              class="user-center"
+              type="date"
+              id="dob"
+              placeholder="mm/dd/yyyy"
+              autocomplete="off"
+            /><b><span class="forerror" id="dob1"></span></b>
+          </div>
+  
+          <div class="user-control">
+            <label for="femail">Email ID:</label>
+            <input
+              class="user-center"
+              type="text"
+              placeholder="abc@abc.com"
+              id="femail"
+              autocomplete="on"
+            /><b><span class="forerror" id="femail1"></span></b>
+          </div>
+  
+          <div class="user-control">
+            <label for="fphone">Phone Number:</label>
+            <input
+              class="user-center"
+              type="text"
+              title="Ten digits code"
+              id="fphone"
+              autocomplete="off"
+            /><b><span class="forerror" id="fphone1"></span></b>
+          </div>
+  
+          <div class="user-control">
+            Gender:
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" />
+            <label for="other">Other</label>
+            <b><span class="forerror" id="gender1"></span></b>
+          </div>
+  
+          <div class="user-control">
+            Currrent State:
+            <select class="user-center" id="state">
+              <option></option>
+              <option>Andaman And Nicobar Islands</option>
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chandigarh</option>
+              <option>Chhattisgarh</option>
+              <option>Dadra And Nagar Haveli</option>
+              <option>Daman And Diu</option>
+              <option>Delhi</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jammu And Kashmir</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Ladakh</option>
+              <option>Lakshadweep</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Manipur</option>
+              <option>Meghalaya</option>
+              <option>Mizoram</option>
+              <option>Nagaland</option>
+              <option>Odisha</option>
+              <option>Puducherry</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Sikkim</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Tripura</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+            </select>
+            <b><span class="forerror" id="state1"></span></b>
+          </div>
+
+          <div class="user-control">
+            Role:
+            <select class="user-center" id="role">
+              <option></option>
+              <option>Alumni(Passout Student)</option>
+              <option>Current Student</option>
+              <option>Staff / Faculty</option>
+            </select>
+            <b><span class="forerror" id="role1"></span></b>
+          </div>
+
+          <div class="user-control">
+            Department:
+            <select class="user-center" id="toToggle" onchange="toggleOther()">
+            <option>Department of Anthropology</option>
+            <option>Department of Bio-Technology</option>
+            <option>Department of Bioinformatics</option>
+            <option>Department of Botany</option>
+            <option>Department of Chemistry</option>
+            <option>Department of Computer Science and Application</option>
+            <option>Department of Food Technology</option>
+            <option>Department of Geography and Applied Geography</option>
+            <option>Department of Geology</option>
+            <option>Department of Mathematics</option>
+            <option>Department of Microbiology</option>
+            <option>Department of Pharmaceutical Technology</option>
+            <option>Department of Physics</option>
+            <option>Department of Tea Science</option>
+            <option>Department of Zoology</option>
+            <option>Centre for Himalayan Studies</option>
+            <option>বাংলা বিভাগ</option>
+            <option>Department of Commerce</option>
+            <option>Department of Economics</option>
+            <option>Department of Education</option>
+            <option>Department of English</option>
+            <option>Department of Hindi</option>
+            <option>Department of History</option>
+            <option>Department of Law</option>
+            <option>Department of Library and Information Science</option>
+            <option>Department of Lifelong Learning and Extension</option>
+            <option>Department of Management</option>
+            <option>Department of Mass Communication</option>
+            <option>Department of Nepali</option>
+            <option>Department of Philosophy</option>
+            <option>Department of Political Science</option>
+            <option>Department of Sanskrit</option>
+            <option>Department of Sociology</option>
+            <option>Department of Women's Studies</option>
+            <option>Other</option>
+            </select>
+            <input  class="extra-option" id="extra-option" type="text" disabled="true" />
+            <b><span class="forerror" id="department1"></span></b>
+          </div>
+
+          <div class="user-control">
+            Degree:
+            <select class="user-center" id="toToggle" onchange="toggleOther()"> 
+                <option>M.sc in Computer Science</option>
+                <option>M.sc in Biotechnology</option>
+                <option>M.sc in Anthropology</option>
+                <option>M.sc in Zoology</option>
+                <option>M.sc in Botany</option>
+                <option>M.sc in Mathematics</option>
+                <option>M.sc in Chemistry</option>
+                <option>M.sc in Physics</option>
+                <option>M.A in Applied Geography</option>
+                <option>M.A in Geography</option>
+                <option>Master of Computer Applications</option>
+                <option>M. Phil in GIS</option>
+                <option>M. Phil in Remote Sensing</option>
+                <option>Ph. D in Computer Science</option>
+                <option>Ph. D in Biotechnology</option>
+                <option>Ph. D in Anthropology</option>
+                <option>Ph. D in Zoology</option>
+                <option>Ph. D in Botany</option>
+                <option>Ph. D in Mathematics</option>
+                <option>Ph. D in Chemistry</option>
+                <option>Ph. D in Physics</option>
+                <option>Ph. D in Applied Geography</option>
+                <option>Ph. D in Geography</option>
+                <option>Ph. D in GIS</option>
+                <option>Ph. D in Remote Sensing</option>
+                <option>Ph. D in Computer Applications</option>
+                <option>Post Graduate Diploma in</option>
+                <option>Post Graduate Diploma in applications</option>
+                <option>Post Graduate Diploma in Disaster management</option>
+                <option>Post Graduate Diploma in Information technology</option>
+                <option>Post Graduate Diploma in Tea management</option>
+                <option>M. Sc microbiology</option>
+                <option>M.A in Hindi</option>
+                <option>Strategic &amp; Area studies</option>
+                <option>M.A in Political Science</option>
+                <option>M.A in Nepali</option>
+                <option>M.A in Sociology</option>
+                <option>M.A in Philosophy</option>
+                <option>M.A in History</option>
+                <option>M.A in Economics</option>
+                <option>M.A in Bengali</option>
+                <option>M.A in English</option>
+                <option>M. Phil in Himalayan studies</option>
+                <option>M. Phil in Political science</option>
+                <option>M. Phil in Nepali</option>
+                <option>M. Phil in Philosophy</option>
+                <option>M. Phil in History</option>
+                <option>M. Phil in Economics</option>
+                <option>Diploma in French Language</option>
+                <option>Post Graduate Diploma in Mass Communication</option>
+                <option>B.Com in Master of Business Administration (Self-financing)</option>
+                <option>B.Com in Post Graduate Diploma in Marketing Management</option>
+                <option>LL.M.</option>
+                <option>LL. B (Honors)</option>
+                <option>Post Graduate Diploma in Environmental Law</option>
+                <option>Certificate course in Tibetan Language</option>
+                <option>M. Phil</option>
+                <option>Post Graduate Diploma courses in Education</option>
+                <option>Post Graduate Diploma courses in Rural Development/Marketing Management</option>
+                <option>Post Graduate Diploma courses in Office Management</option>
+                <option>Soft skill &amp; Personality development</option>
+                <option>Tissue culture</option>
+                <option>Production and training of manpower in Mushroom</option>
+                <option>Post Graduate Diploma in Disaster Management</option>
+                <option>Directorate of Distance Education Master of Arts in Mathematics</option>
+                <option>Directorate of Distance Education Master of Arts in Philosophy</option>
+                <option>Directorate of Distance Education Master of Arts in Political science</option>
+                <option>Directorate of Distance Education Master of Arts in History</option>
+                <option>Directorate of Distance Education Master of Arts in Nepali</option>
+                <option>Directorate of Distance Education Master of Arts in Bengali</option>
+                <option>Directorate of Distance Education Master of Arts in English</option>
+                <option>Directorate of Distance Education Master of Arts in Bachelor of Arts in</option>
+                <option>Directorate of Distance Education Master of Arts in Mathematics</option>
+                <option>Directorate of Distance Education Master of Arts in Philosophy</option>
+                <option>Directorate of Distance Education Master of Arts in Political science</option>
+                <option>Directorate of Distance Education Master of Arts in History</option>
+                <option>Directorate of Distance Education Master of Arts in Nepali</option>
+                <option>Directorate of Distance Education Master of Arts in Bengali</option>
+                <option>Directorate of Distance Education Master of Arts in English</option>
+                <option>Post Graduate Diploma in</option>
+                <option>Post Graduate Diploma in Logistics &amp; Supply Chain Management</option>
+                <option>Post Graduate Diploma in Information Technology</option>
+                <option>Post Graduate Diploma in Computer applications</option>
+                <option>Diploma in Multimedia Technology</option>
+                <option>B.Sc in Software systems</option>
+                <option>B.Sc in Information technology</option>
+                <option>Bachelor of Business Administration</option>
+                <option>Bachelor of Computer Applications</option>
+                <option>Post Graduate Diploma in Information Technology</option>
+                <option>Other</option>
+            </select>
+            <input  class="extra-option" id="extra-option" type="text" disabled="true" />
+            <b><span class="forerror" id="degree1"></span></b>
+          </div>
+
+          <div class="user-control">
+            Country:
+            <select class="user-center">
+              <option>India</option>
+            </select>
+          </div>
+
+          <div class="user-control">
+            <span class="user-center">
+              <label for ="year">Passout Year:</label>
+              <select name="year" id="year">Passout Year:</select>
+            </span>
+            <b><span class="forerror" id="year1"></span></b>
+          </div>
+  
+          <div class="user-control">
+            Current company:
+            <input class="user-center" type="text" id="company" autocomplete="off" />
+            <b><span class="forerror" id="company1"></span></b>
+          </div> 
+
+          <div class="user-control">
+            Company branch:
+            <input class="user-center" type="text" id="company" autocomplete="off" />
+            <b><span class="forerror" id="company1"></span></b>
+          </div> 
+
+          <div class="user-control">
+            <input type="submit" value="JOIN ALUMNI NETWORK" class="user-btn" name="" />
+          </div>
+        </form>
+      </section>
+
+    <!--- Footer code start --->
+    <section class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i> </a>
+            <a href="#"><i class="fab fa-snapchat"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+            <a href="#"><i class="fab fa-facebook"></i> </a>
+        </div>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Future Coders @2021</p>
+    </section>
+    <!--- Footer code end --->
+</body>
+</html>

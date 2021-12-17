@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--- Header code start --->
+    <header>
+         <nav class="navigation">
+        <label class="navigation-h">NBU</label>
+        <ul>
+            <i class="fas fa-user"></i>
+            <li><a href="#">Logot</a></li>
+            <!--
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Feedback</a></li>
+            -->
+        </ul>
+        <label class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    </header>
+    <!--- Header code end --->
+    <section>
+        <form
+          action="user_details.html"
+          class="form"
+          id="form"
+          onsubmit="return validation()"
+        >
+        <div class="header">
+          <h2>North Bengal University</h2>
+        </div>
+
+    <div class="institute-control">
+        <span class="institute-center">
+          <label for ="institute">Institute name:</label>
+          <select name="institute" id="toToggle" onchange="toggleOther()">
+              <option></option>
+              <option>North Bengal University</option>
+              <option>A. C. Trainig College</option>
+              <option>Alipurduar College</option>
+              <option>Ananda Chandra College</option>
+              <option>Ananda Chandra College of Commerce</option>
+              <option>Bakshirhat Mahavidyalaya</option>
+              <option>Bijanbari College</option>
+              <option>Birpara College</option>
+              <option>Cluny Women's College</option>
+              <option>Cooch Behar B.Ed. Trining College</option>
+              <option>Cooachbehar College</option>
+              <option>Damber Sing Degree College</option>
+              <option>Darjeeling Governmment College</option>
+              <option>Dewan Abdul Gani College</option>
+              <option>Dewanhat Mahavidyalaya</option>
+              <option>Dinhata College</option>
+              <option>Eastern Dooar's B.Ed. Training College </option>
+              <option>Falakata B.Ed. College</option>
+              <option>Falakata College</option>
+              <option>Ghoom-Jorebunglow Degree College</option>
+              <option>Govt. College Rhenock</option>
+              <option>Govt. Law College</option>
+              <option>Islampur Collge</option>
+              <option>Jalpaiguri Law College</option>
+              <option>Kalimpong College</option>
+              <option>Kalipada Ghosh Tarai Mahavidyalaya</option>
+              <option>Kurseong College</option>
+              <option>Mathabhanga College</option>
+              <option>Maynaguri College</option>
+              <option>Mekhliganj College</option>
+              <option>Mirik College</option>
+              <option>Nani Bhattacharya Smarak Mahavidyalaya</option>
+              <option>North Bengal St. Xavier's College</option>
+              <option>P. D. Women's College</option>
+              <option>Parimal Mitra Smriti Mahavidyalaya</option>
+              <option>Post Graduate College of Physical Education for Women</option>
+              <option>Raiganj College</option>
+              <option>Saheed Kshudiram Mahavidyalaya</option>
+              <option>Salesian College</option>
+              <option>Sikkim Govt. Law College</option>
+              <option>Siliguri B.Ed. College</option>
+              <option>Siliguri College of Commerce</option>
+              <option>Siliguri Mahila Mahavidyalaya</option>
+              <option>Sitalkuchi College</option>
+              <option>Sonada Degree College</option>
+              <option>Southfield College(earlier known as Loreto College)</option>
+              <option>SriRamkrishna B.T. College </option>
+              <option>St. Joseph Colege</option>
+              <option>Sukanta Mahavidyalaya</option>
+              <option>Surya Sen Mahavidyalaya</option>
+              <option>Thakur Panchanan Mahila Mahavidyalaya</option>
+              <option>Tufanganj College</option>
+              <option>University B.T & Evening College</option>
+              <option>Vivekanand College</option>
+              <option>Other</option>
+          </select>
+          <input  class="extra-option" id="extra-option" type="text" disabled="true" />
+        </span>
+        <b><span class="forerror" id="year1"></span></b>
+      </div>
+
+      <div class="reg-control">
+        <input type="submit" value="Submit" class="reg-btn" name="" />
+      </div>
+    </form>
+</section>
+
+    <!--- Footer code start --->
+    <section class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i> </a>
+            <a href="#"><i class="fab fa-snapchat"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+            <a href="#"><i class="fab fa-facebook"></i> </a>
+        </div>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Future Coders @2021</p>
+    </section>
+    <!--- Footer code end --->
+</body>
+</html>

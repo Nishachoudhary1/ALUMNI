@@ -46,6 +46,10 @@ body {
   transition: 0.5s;
 }
 
+.navigation ul i{
+  color: #39ca74;
+}
+
 .checkbtn {
   font-size: 30px;
   color: white;
@@ -165,3 +169,9 @@ body {
     color: #aaa;
 
 }
+
+/* For "other" option in drop down menu */
+.extra-option{
+  border: none;
+}
+
