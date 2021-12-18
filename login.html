@@ -28,22 +28,30 @@
     </nav>
     </header>
     <!--- Header code end --->
+
     <section>
-        <form>
+        <form 
+            action="show_details.html"
+            class="form"
+            id="form"
+            onsubmit="return validation()"
+        >
             <h1>
                 Login
             </h1>
-            <div>
-                <input type="text">
+            <div class="login-control">
+                Name:
+                <input type="text" id="fname" placeholder="Full Name" autocomplete="off" >
             </div>
-            <div>
-                <input type="text">
+            <div class="login-control">
+                Password:
+                <input type="password" id="password" autocomplete="off" >
             </div>
             <div>
                 <button>Submit</button>
             </div>
             <div>
-                <a href="#">Forgot password or username</a>
+                <a href="#">Forgot password</a>
             </div>
             <div>
                 <a href="#">Need help?</a>
@@ -51,7 +59,7 @@
             <div>
                 <a href="#">Remember me</a>
             </div>
-            <div>
+            <div class="login-control">
                 New User?<a href="register.html"> Register Here</a>
             </div>
 
